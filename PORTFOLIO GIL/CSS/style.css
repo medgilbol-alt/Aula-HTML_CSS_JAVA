@@ -1,0 +1,429 @@
+/* ============================================
+   GILBERTO PEREIRA - PORTFÓLIO
+   ============================================ */
+
+/* ===== CORES E FONTE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    background-color: #0A0A0A;
+    color: #00FF41;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #003300;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    font-size: 0.85rem;
+    color: #00AA2A;
+}
+
+.nav a:hover {
+    color: #00FF41;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+/* ===== TERMINAL ===== */
+.terminal {
+    background-color: #0D0D0D;
+    border: 1px solid #003300;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+}
+
+.terminal-header {
+    display: flex;
+    gap: 8px;
+    padding: 12px 15px;
+    background-color: #111111;
+    border-bottom: 1px solid #003300;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red { background-color: #FF5F56; }
+.dot.yellow { background-color: #FFBD2E; }
+.dot.green { background-color: #27C93F; }
+
+.terminal-body {
+    padding: 25px;
+}
+
+.terminal-body p {
+    margin-bottom: 10px;
+}
+
+.prompt {
+    color: #33FF66;
+    margin-right: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.tagline {
+    color: #00AA2A;
+}
+
+.status {
+    color: #006600;
+    margin-top: 20px;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* ===== Sessoes ===== */
+.section {
+    padding: 80px 0;
+    border-top: 1px solid #003300;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #006600;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+/* ===== Sobre ===== */
+.about-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-image img {
+    border: 2px solid #003300;
+    padding: 8px;
+    background-color: #111111;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+}
+
+.about-image img:hover {
+    filter: grayscale(0%);
+    border-color: #00FF41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+/* Bloco */
+.code-block {
+    background-color: #111111;
+    border: 1px solid #003300;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.code-block p {
+    margin: 5px 0;
+}
+
+.comment {
+    color: #006600;
+    font-style: italic;
+}
+
+.keyword {
+    color: #FF79C6;
+}
+
+.variable {
+    color: #00FF41;
+}
+
+.property {
+    color: #8BE9FD;
+}
+
+.string {
+    color: #F1FA8C;
+}
+
+.indent {
+    padding-left: 25px;
+}
+
+.bio {
+    color: #00AA2A;
+    line-height: 1.9;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #111111;
+    border: 1px solid #003300;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    border-color: #00FF41;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 0.8rem;
+    color: #006600;
+}
+
+/* ===== Projetos ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #111111;
+    border: 1px solid #003300;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    opacity: 1;
+    border-color: #00FF41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.project-placeholder {
+    height: 150px;
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #003300;
+    color: #006600;
+}
+
+.project-placeholder span {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 0.85rem;
+    color: #00AA2A;
+    margin-bottom: 15px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    background-color: #0A0A0A;
+    border: 1px solid #003300;
+    color: #006600;
+}
+
+/* ===== CONTACT ===== */
+.contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-links {
+    margin: 20px 0;
+}
+
+.contact-item {
+    display: block;
+    padding: 10px 0;
+    color: #00AA2A;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #00FF41;
+    padding-left: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.contact-item .label {
+    color: #006600;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 25px;
+    border-top: 1px solid #003300;
+    text-align: center;
+    color: #006600;
+    font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .about-image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-image img {
+        max-width: 200px;
+    }
+    
+    .code-block {
+        text-align: left;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+    }
+    
+    .indent {
+        padding-left: 15px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
